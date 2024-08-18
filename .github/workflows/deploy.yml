@@ -1,4 +1,4 @@
-name: deploy microservices 
+name: deploy aws-vpc-ec2 
 
 on:
   workflow_dispatch:
