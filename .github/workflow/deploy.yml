@@ -7,7 +7,6 @@ jobs:
   terraform:
     name: Terraform Deploy
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -39,10 +38,4 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
 
-      - name: Save Terraform state to artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: terraform-state
-          path: |
-            terraform.tfstate
-            terraform.tfstate.backup
+      
